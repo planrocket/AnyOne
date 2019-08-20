@@ -1,0 +1,68 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "https://git.xin.com/AndroidSDK/config/raw/master/config_public.gradle"
+//apply from: "config_public.gradle"
+apply from: "config_private.gradle"
+
+buildscript {
+    repositories {
+        //务必配置私服地址
+        maven{ url 'http://172.20.90.31:8083/repository/group_android/'}
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0-rc03'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+
+        //如果 引入了aar包，请打开这项目
+//        flatDir {
+//            //示例
+//            dirs '../xinlibswrapper/libs'
+//        }
+
+
+        //务必配置私服地址
+        maven{ url 'http://172.20.90.31:8083/repository/group_android/'}
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+        google()
+        jcenter()
+        
+    }
+
+    //全局配置，移除不必要的gradle task，加快编译
+    gradle.taskGraph.whenReady {
+        tasks.each { task ->
+            if (task.name.contains("lint")
+                    //如果instant run不生效，把clean这行干掉
+                    //||task.name.equals("clean")
+                    //如果项目中有用到aidl则不可以舍弃这个任务
+                    || task.name.contains("Aidl")
+                    //用不到测试的时候就可以先关闭
+                    || task.name.contains("mockableAndroidJar")
+                    || task.name.contains("UnitTest")
+                    || task.name.contains("AndroidTest")
+                    //用不到NDK和JNI的也关闭掉
+                    || task.name.contains("Ndk")
+            //|| task.name.contains("Jni")
+            ) {
+                task.enabled = false
+            }
+        }
+    }
+
+}
+
+//删除所有build文件夹
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

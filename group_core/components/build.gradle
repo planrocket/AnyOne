@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android_public.compileSdkVersion
+//    buildToolsVersion rootProject.ext_public.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android_private.minSdkVersion
+        targetSdkVersion rootProject.ext.android_private.targetSdkVersion
+        versionCode rootProject.ext.android_private.versionCode
+        versionName rootProject.ext.android_private.versionName
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    implementation project(path: ':group_core:core')
+}

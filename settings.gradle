@@ -1,0 +1,16 @@
+rootProject.name='AnyOne'
+//壳
+include ':app'
+
+//业务逻辑
+include ':group_biz:sale'
+
+//业务配置块
+include ':group_common:base'
+
+//通用组件层
+include ':group_core:components'
+
+//核心基础依赖
+include ':group_core:core'
+
