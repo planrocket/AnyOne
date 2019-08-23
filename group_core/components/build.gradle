@@ -16,6 +16,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        devBuild {
+
+        }
     }
 
 }
@@ -24,5 +27,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
 
-    implementation project(path: ':group_core:core')
+    implementation project(path: ':core')
 }

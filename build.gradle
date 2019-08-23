@@ -6,15 +6,15 @@ apply from: "config_private.gradle"
 buildscript {
     repositories {
         //务必配置私服地址
-        maven{ url 'http://172.20.90.31:8083/repository/group_android/'}
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url 'http://172.20.90.31:8083/repository/group_android/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0-rc03'
-        
+        classpath 'com.android.tools.build:gradle:3.4.2'
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -31,12 +31,12 @@ allprojects {
 
 
         //务必配置私服地址
-        maven{ url 'http://172.20.90.31:8083/repository/group_android/'}
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url 'http://172.20.90.31:8083/repository/group_android/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 
         google()
         jcenter()
-        
+
     }
 
     //全局配置，移除不必要的gradle task，加快编译
