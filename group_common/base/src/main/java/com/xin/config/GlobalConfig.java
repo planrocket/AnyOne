@@ -7,7 +7,7 @@ package com.xin.config;
  * 主要是配置类信息，仅在Application onCreate完成配置
  */
 
-public class GlobalConfig {
+public final class GlobalConfig {
 
     //BuildConfig替代
     private boolean mIsDebug;
