@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.android_public.compileSdkVersion
-//    buildToolsVersion rootProject.ext_public.android.buildToolsVersion
+    buildToolsVersion rootProject.ext.android_public.buildToolsVersion
     defaultConfig {
         minSdkVersion rootProject.ext.android_private.minSdkVersion
         targetSdkVersion rootProject.ext.android_private.targetSdkVersion
@@ -28,4 +28,7 @@ dependencies {
 
 
     implementation project(path: ':core')
+
+    implementation rootProject.ext.depends_public.appcompatv7
+    implementation rootProject.ext.depends_public.constraint_layout
 }

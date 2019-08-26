@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.android_public.compileSdkVersion
-//    buildToolsVersion rootProject.ext_public.android.buildToolsVersion
+    buildToolsVersion rootProject.ext.android_public.buildToolsVersion
     defaultConfig {
         minSdkVersion rootProject.ext.android_private.minSdkVersion
         targetSdkVersion rootProject.ext.android_private.targetSdkVersion
@@ -30,5 +30,5 @@ dependencies {
     implementation project(path: ':core')//不希望向外部暴露core依赖，让他们使用u_common
 
     implementation rootProject.ext.depends_public.appcompatv7
-    implementation rootProject.ext.depends_public.recyclerviewv7
+    implementation rootProject.ext.depends_public.recyclerview_v7
 }
