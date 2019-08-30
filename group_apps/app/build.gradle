@@ -37,7 +37,7 @@ dependencies {
 
     implementation project(path: ':sale')
     implementation project(path: ':base')
-    implementation project(path: ':components')
+//    implementation project(path: ':components')
 
 
     implementation rootProject.ext.depends_public.appcompatv7

@@ -9,15 +9,15 @@ include ':sale'
 include ':base'
 
 //通用组件层
-include ':components'
+//include ':components'
 
 //核心基础依赖
-include ':core'
+//include ':core'
 
 
 project(':app').projectDir = new File(settingsDir, 'group_apps/app')
 project(':sale').projectDir = new File(settingsDir, 'group_biz/sale')
 project(':base').projectDir = new File(settingsDir, 'group_common/base')
-project(':components').projectDir = new File(settingsDir, 'group_core/components')
-project(':core').projectDir = new File(settingsDir, 'group_core/core')
+//project(':components').projectDir = new File(settingsDir, 'group_core/components')
+//project(':core').projectDir = new File(settingsDir, 'group_core/core')
 

@@ -27,7 +27,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(path: ':base')
-    implementation project(path: ':components')
+//    implementation project(path: ':components')
 
     implementation rootProject.ext.depends_public.appcompatv7
     implementation rootProject.ext.depends_public.constraint_layout
