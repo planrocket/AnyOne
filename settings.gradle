@@ -1,6 +1,6 @@
 rootProject.name = 'AnyOne'
 //壳
-include ':app'
+include ':app', ':demo'
 
 //业务逻辑
 include ':sale'
