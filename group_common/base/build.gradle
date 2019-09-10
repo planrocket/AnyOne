@@ -29,6 +29,7 @@ dependencies {
 //    api project(path: ':components')
 //    implementation project(path: ':core')//不希望向外部暴露core依赖，让他们使用u_common
 
-    implementation rootProject.ext.depends_public.appcompatv7
+    implementation rootProject.ext.depends_public.appcompat_v7
     implementation rootProject.ext.depends_public.recyclerview_v7
+    implementation rootProject.ext.depends_public.utilcode
 }
