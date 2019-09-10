@@ -1,4 +1,4 @@
-package com.xin.config;
+package com.xin.common.config;
 
 
 /**

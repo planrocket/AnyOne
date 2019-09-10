@@ -24,8 +24,9 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation rootProject.ext.depends_public.appcompat_v7
     implementation rootProject.ext.depends_public.constraint_layout
+    implementation rootProject.ext.depends_public.recyclerview_v7
+    implementation project(':base')
 }

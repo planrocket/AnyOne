@@ -14,8 +14,8 @@ import java.util.List;
  * 适用于Recycview的adaper
  */
 public abstract class BaseRVAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
-    private final List<T> mList;
-    private final Context mContext;
+    protected final List<T> mList;
+    protected final Context mContext;
 
     public BaseRVAdapter(Context context) {
         this(context, null);

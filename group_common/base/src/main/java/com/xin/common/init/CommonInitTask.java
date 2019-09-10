@@ -3,7 +3,7 @@ package com.xin.common.init;
 import android.content.Context;
 
 import com.blankj.utilcode.util.Utils;
-import com.xin.config.GlobalConfig;
+import com.xin.common.config.GlobalConfig;
 
 public class CommonInitTask {
 
