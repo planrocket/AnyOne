@@ -5,11 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.demo.R;
 
-public class OneActivity extends AppCompatActivity {
+public class OneActivity extends AppCompatActivity implements OneContract.View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
+
+    }
+
+    @Override
+    public void onBtnClicked() {
+
     }
 }
